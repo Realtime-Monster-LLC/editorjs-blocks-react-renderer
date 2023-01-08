@@ -18,7 +18,7 @@ export type RenderFn<T = undefined, K = Record<string, any> | undefined> = (
   _: {
     data: T;
     className?: string;
-    id: string;
+    id?: string;
   } & K,
 ) => JSX.Element;
 
