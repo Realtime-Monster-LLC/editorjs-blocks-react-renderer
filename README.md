@@ -16,12 +16,12 @@ This also supports server side rendering.
 
 Install the package via npm:
 ```sh
-npm i -S editorjs-blocks-react-renderer
+npm i -S editorjs-blocks-react-renderer-rm
 ```
 
 Import in your component:
 ```js
-import Blocks from 'editorjs-blocks-react-renderer';
+import Blocks from 'editorjs-blocks-react-renderer-rm';
 ```
 
 Use it with a [block style data](https://editorjs.io/saving-data) from Editor.js:
@@ -33,7 +33,7 @@ export const Article = () => <Blocks data={dataFromEditor} />;
 
 Blocks are independent and you can import only a set of them and use them diretly:
 ```jsx
-import { Header } from 'editorjs-react-renderer';
+import { Header } from 'editorjs-react-renderer-rm';
 
 const dataHeader: HeaderBlockData = {
   text: "Heading 2",

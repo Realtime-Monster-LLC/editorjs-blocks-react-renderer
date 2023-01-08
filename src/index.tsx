@@ -80,7 +80,7 @@ const Blocks = ({
           return (
             <Tag
               key={hasBlockId && block.id ? block.id : i}
-              id={hasBlockId && block.id ? block.id : i}
+              id={block.id || i}
               data={block.data}
               {...config[block.type]}
             />
