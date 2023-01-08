@@ -18,6 +18,7 @@ export type RenderFn<T = undefined, K = Record<string, any> | undefined> = (
   _: {
     data: T;
     className?: string;
+    id: string;
   } & K,
 ) => JSX.Element;
 
@@ -76,7 +77,7 @@ const Blocks = ({
         if (block.type.toString() in availableRenderers) {
           // @ts-ignore Todo: find a fix
           const Tag = availableRenderers[block.type];
-          return <Tag key={hasBlockId && block.id ? block.id : i} data={block.data} {...config[block.type]} />;
+          return <Tag key={hasBlockId && block.id ? block.id : i} id={hasBlockId && block.id ? block.id : i} data={block.data} {...config[block.type]} />;
         }
       })}
     </>
